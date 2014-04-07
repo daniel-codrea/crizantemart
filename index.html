@@ -52,6 +52,13 @@
     <script>
       $(document).foundation();
          $.backstretch("img/home_background.jpg");
+        var menuHeight = $("#menu").height();
+        var browserHeight = $(window).height();
+        if((browserHeight - 235) <= menuHeight){
+            //TODO - add a new accordion menu
+        } else {
+            //TODO - add browser height to column and position contact details at the bottom of screen
+        }
     </script>
   </body>
 </html>
