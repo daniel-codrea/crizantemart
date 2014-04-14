@@ -20,27 +20,49 @@
         </div>
         <div id="menu">
             <h2>Photography</h2>
-            <p><a href="wedding.html">wedding</a></p>
+            <p><a class="active" href="wedding.html">wedding</a></p>
             <p><a href="christening.html">christening</a></p>
             <p><a href="portrait.html">portrait</a></p>
             <p><a href="fashion.html">fashion</a></p>
             <p><a href="commercial.html">commercial</a></p>
             <p><a href="landscape.html">landscape</a></p>
             <p><a href="abstract.html">abstract</a></p>
-            <h2>Graphic Design</h2>
-            <p><a href="branding.html">branding</a></p>
-            <p><a href="print.html">print &amp; packaging</a></p>
-            <p><a href="web.html">web design</a></p>
-            <p><a href="illustration.html">illustration</a></p>
         </div>
         <div id="footerContact">
             <p>tel: 00357 96737090<br />email: info@crizantemart.com</p>
         </div>
       </div>
         <div class="large-8 columns">
-        <p>&nbsp;</p>
+            <div id="secondNav">
+                <p><a href="index.html" class="mR30">Home</a><a href="about.html">About</a></p>
+            </div>
+            <div class="carousel" data-mixed>
+				<a class="prev" data-prev></a>
+				<ul>
+					<li>
+						<div class="wrap"><figure><img data-src="img/portfolio/wedding/1.jpg" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="" /></figure></div>
+					</li>
+					<li>
+						<div class="wrap"><figure><img data-src="img/portfolio/wedding/2.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /></figure></div>
+					</li>
+					<li>
+						<div class="wrap"><figure><img data-src="img/portfolio/wedding/3.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /></figure></div>
+					</li>
+					<li>
+						<div class="wrap"><figure><img data-src="img/portfolio/wedding/4.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /></figure></div>
+					</li>
+					<li>
+						<div class="wrap"><figure><img data-src="img/portfolio/wedding/5.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /></figure></div>
+					</li>
+					<li>
+						<div class="wrap"><figure><img data-src="img/portfolio/wedding/6.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /></figure></div>
+					</li>
+				</ul>
+				<a class="next" data-next></a>
+			</div>
+            <p>&nbsp;</p>
+        </div>
       </div>
-    </div>
 
 
 
@@ -49,9 +71,10 @@
     <script src="js/vendor/jquery.js"></script>
     <script src="js/foundation.min.js"></script>
       <script src="js/backstretch.js"></script>
+      <script type="text/javascript" src="js/jquery.anoslide.js"></script>
     <script>
       $(document).foundation();
-        $.backstretch("img/home_background.jpg");
+         $.backstretch("img/photo_background.jpg");
         var menuHeight = $("#menu").height();
         var browserHeight = $(window).height();
         var menuTopMargin = (browserHeight - menuHeight -245) / 2;
@@ -63,6 +86,16 @@
             $("#menu").css("margin-top", menuTopMargin + "px");
             //TODO - add browser height to column and position contact details at the bottom of screen
         }
+
+        $('.carousel[data-mixed] ul').anoSlide(
+			{
+				items: 3,
+				speed: 500,
+				prev: 'a.prev[data-prev]',
+				next: 'a.next[data-next]',
+				lazy: true,
+				delay: 100
+			})
     </script>
   </body>
 </html>
